@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "</s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<unk>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "</s>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 1
+        }
+      }
+    ],
+    "special_tokens": {
+      "</s>": {
+        "id": "</s>",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "</s>"
+        ]
+      },
+      "<pad>": {
+        "id": "<pad>",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "<pad>"
+        ]
+      },
+      "<s>": {
+        "id": "<s>",
+        "ids": [
+          0
+        ],
+        "tokens": [
+          "<s>"
+        ]
+      },
+      "<unk>": {
+        "id": "<unk>",
+        "ids": [
+          3
+        ],
+        "tokens": [
+          "<unk>"
+        ]
+      }
+    }
+  },
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "<s>": 0,
+      "<pad>": 1,
+      "</s>": 2,
+      "<unk>": 3,
+      "A": 4,
+      "B": 5,
+      "C": 6,
+      "D": 7,
+      "E": 8,
+      "F": 9,
+      "G": 10,
+      "H": 11,
+      "I": 12,
+      "J": 13,
+      "K": 14,
+      "L": 15,
+      "M": 16,
+      "N": 17,
+      "O": 18,
+      "P": 19,
+      "Q": 20,
+      "R": 21,
+      "S": 22,
+      "T": 23,
+      "U": 24,
+      "V": 25,
+      "W": 26,
+      "X": 27,
+      "Y": 28,
+      "Z": 29
+    },
+    "unk_token": "<unk>"
+  }
+}
